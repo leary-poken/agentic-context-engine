@@ -1988,7 +1988,7 @@
 <h3 id="comet-cloud">Comet Cloud<a class="headerlink" href="#comet-cloud" title="Permanent link">&para;</a></h3>
 <p>For production, use <a href="https://www.comet.com/opik">Comet's hosted Opik</a>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Set your Comet API key</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">COMET_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-api-key&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">COMET_API_KEY</span><span class="o">=</span><span class="s2">"your-api-key"</span>
 </code></pre></div>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
 <h3 id="script-initialization">Script Initialization<a class="headerlink" href="#script-initialization" title="Permanent link">&para;</a></h3>
@@ -1998,19 +1998,19 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="c1"># Initialize Opik with project name</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">project_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;OPIK_PROJECT_NAME&quot;</span><span class="p">,</span> <span class="s2">&quot;ace-default&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">project_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"OPIK_PROJECT_NAME"</span><span class="p">,</span> <span class="s2">"ace-default"</span><span class="p">)</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">opik_integration</span> <span class="o">=</span> <span class="n">configure_opik</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="n">project_name</span><span class="p">)</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="k">if</span> <span class="n">opik_integration</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="c1"># Register LiteLLM callback for automatic token tracking</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">opik_integration</span><span class="o">.</span><span class="n">setup_litellm_callback</span><span class="p">()</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Opik tracing enabled for project: </span><span class="si">{</span><span class="n">project_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Opik tracing enabled for project: </span><span class="si">{</span><span class="n">project_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="c1"># Your ACE code here...</span>
 </code></pre></div>
 <h3 id="running-with-tracing">Running with Tracing<a class="headerlink" href="#running-with-tracing" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Run with custom project name</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">OPIK_PROJECT_NAME</span><span class="o">=</span><span class="s2">&quot;my-experiment&quot;</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>my_script.py
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">OPIK_PROJECT_NAME</span><span class="o">=</span><span class="s2">"my-experiment"</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>my_script.py
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># View traces at http://localhost:5173</span>
 </code></pre></div>
@@ -2095,7 +2095,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace.observability.tracers</span><span class="w"> </span><span class="kn">import</span> <span class="n">maybe_track</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyCustomComponent</span><span class="p">:</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="nd">@maybe_track</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_component_process&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span> <span class="s2">&quot;processing&quot;</span><span class="p">])</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="nd">@maybe_track</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"my_component_process"</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">"custom"</span><span class="p">,</span> <span class="s2">"processing"</span><span class="p">])</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data</span><span class="p">):</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="c1"># Your processing logic here</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_do_work</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
@@ -2117,13 +2117,13 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace.llm_providers.litellm_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiteLLMClient</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Initialize Opik</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">opik_integration</span> <span class="o">=</span> <span class="n">configure_opik</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;cost-tracking-demo&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">opik_integration</span> <span class="o">=</span> <span class="n">configure_opik</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">"cost-tracking-demo"</span><span class="p">)</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">if</span> <span class="n">opik_integration</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">opik_integration</span><span class="o">.</span><span class="n">setup_litellm_callback</span><span class="p">()</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># All LLM calls are now tracked</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="s2">&quot;What is 2+2?&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4"</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="s2">"What is 2+2?"</span><span class="p">)</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c1"># Token usage and cost automatically logged to Opik</span>
 </code></pre></div>
 <h2 id="viewing-traces">Viewing Traces<a class="headerlink" href="#viewing-traces" title="Permanent link">&para;</a></h2>
@@ -2154,12 +2154,12 @@
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Log skill evolution</span>
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">opik</span><span class="o">.</span><span class="n">log_skill_evolution</span><span class="p">(</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">skill_id</span><span class="o">=</span><span class="s2">&quot;skill_001&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="n">skill_content</span><span class="o">=</span><span class="s2">&quot;Always validate input...&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">skill_id</span><span class="o">=</span><span class="s2">"skill_001"</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="n">skill_content</span><span class="o">=</span><span class="s2">"Always validate input..."</span><span class="p">,</span>
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">helpful_count</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="n">harmful_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="n">neutral_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">&quot;error_handling&quot;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">"error_handling"</span>
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">)</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="c1"># Log adaptation metrics</span>
@@ -2178,14 +2178,14 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Or in code</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>import<span class="w"> </span>os
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>os.environ<span class="o">[</span><span class="s2">&quot;OPIK_DISABLED&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>os.environ<span class="o">[</span><span class="s2">"OPIK_DISABLED"</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"true"</span>
 </code></pre></div>
 <h3 id="using-with-async-code">Using with Async Code<a class="headerlink" href="#using-with-async-code" title="Permanent link">&para;</a></h3>
 <p>The <code>@maybe_track</code> decorator works with both sync and async functions:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace.observability.tracers</span><span class="w"> </span><span class="kn">import</span> <span class="n">maybe_track</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">AsyncComponent</span><span class="p">:</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nd">@maybe_track</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;async_process&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;async&quot;</span><span class="p">])</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nd">@maybe_track</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"async_process"</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">"async"</span><span class="p">])</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_async_work</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="k">return</span> <span class="n">result</span>
@@ -2217,14 +2217,14 @@
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="c1"># 1. Initialize Opik</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">project_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;OPIK_PROJECT_NAME&quot;</span><span class="p">,</span> <span class="s2">&quot;ace-training&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">project_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"OPIK_PROJECT_NAME"</span><span class="p">,</span> <span class="s2">"ace-training"</span><span class="p">)</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">opik_integration</span> <span class="o">=</span> <span class="n">configure_opik</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="n">project_name</span><span class="p">)</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="k">if</span> <span class="n">opik_integration</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
 <a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="n">opik_integration</span><span class="o">.</span><span class="n">setup_litellm_callback</span><span class="p">()</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tracing enabled: </span><span class="si">{</span><span class="n">project_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tracing enabled: </span><span class="si">{</span><span class="n">project_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
 <a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    <span class="c1"># 2. Create ACE components (all LLM calls will be traced)</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4"</span><span class="p">)</span>
 <a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    <span class="n">skillbook</span> <span class="o">=</span> <span class="n">Skillbook</span><span class="p">()</span>
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>    <span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">llm</span><span class="p">)</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>    <span class="n">reflector</span> <span class="o">=</span> <span class="n">Reflector</span><span class="p">(</span><span class="n">llm</span><span class="p">)</span>
@@ -2242,11 +2242,11 @@
 <a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>
 <a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>    <span class="c1"># 4. View traces at http://localhost:5173</span>
 <a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>
-<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
 <a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
 <p>Run with:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">OPIK_PROJECT_NAME</span><span class="o">=</span><span class="s2">&quot;training-run-001&quot;</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>train.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">OPIK_PROJECT_NAME</span><span class="o">=</span><span class="s2">"training-run-001"</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>train.py
 </code></pre></div></p>
 <h2 id="ace_next-pipeline-tracing">ace_next Pipeline Tracing<a class="headerlink" href="#ace_next-pipeline-tracing" title="Permanent link">&para;</a></h2>
 <p>The <code>ace_next</code> pipeline provides two dedicated Opik steps. These are separate from the legacy <code>ace/</code> tracing described above.</p>
@@ -2256,7 +2256,7 @@
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">ace</span> <span class="o">=</span> <span class="n">ACE</span><span class="o">.</span><span class="n">from_roles</span><span class="p">(</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="n">agent</span><span class="o">=</span><span class="n">agent</span><span class="p">,</span> <span class="n">reflector</span><span class="o">=</span><span class="n">reflector</span><span class="p">,</span> <span class="n">skill_manager</span><span class="o">=</span><span class="n">skill_manager</span><span class="p">,</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">extra_steps</span><span class="o">=</span><span class="p">[</span><span class="n">OpikStep</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;my-project&quot;</span><span class="p">)],</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">extra_steps</span><span class="o">=</span><span class="p">[</span><span class="n">OpikStep</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">"my-project"</span><span class="p">)],</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">)</span>
 </code></pre></div>
 <h3 id="rropikstep-recursive-reflector">RROpikStep (Recursive Reflector)<a class="headerlink" href="#rropikstep-recursive-reflector" title="Permanent link">&para;</a></h3>
@@ -2266,7 +2266,7 @@
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">rr</span> <span class="o">=</span> <span class="n">RRStep</span><span class="p">(</span><span class="n">llm</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">RRConfig</span><span class="p">(</span><span class="n">max_iterations</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="c1"># Place RROpikStep after RRStep in the pipeline</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">steps</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">rr</span><span class="p">,</span> <span class="n">RROpikStep</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;my-project&quot;</span><span class="p">)]</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">steps</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">rr</span><span class="p">,</span> <span class="n">RROpikStep</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">"my-project"</span><span class="p">)]</span>
 </code></pre></div>
 <p><strong>Trace hierarchy:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rr_reflect (trace)
@@ -2327,9 +2327,9 @@
 - Call <code>flush()</code> after the pipeline finishes to drain buffered traces before the process exits.</p>
 <p><strong>Parent trace metadata:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="s2">&quot;total_iterations&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="s2">&quot;subagent_call_count&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>   <span class="c1"># only when sub-agent calls exist</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="s2">&quot;subagent_calls&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="c1"># full call history</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="s2">"total_iterations"</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="s2">"subagent_call_count"</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>   <span class="c1"># only when sub-agent calls exist</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="s2">"subagent_calls"</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="c1"># full call history</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span>
 </code></pre></div>
 <p>See <a href="RR_DESIGN.md">RR_DESIGN.md</a> for the full Recursive Reflector architecture.</p>

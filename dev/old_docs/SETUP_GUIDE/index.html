@@ -1908,10 +1908,10 @@
 <h2 id="api-key-setup">API Key Setup<a class="headerlink" href="#api-key-setup" title="Permanent link">&para;</a></h2>
 <h3 id="option-1-environment-variable-recommended">Option 1: Environment Variable (Recommended)<a class="headerlink" href="#option-1-environment-variable-recommended" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Set in your shell</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-...&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">"sk-..."</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Or create .env file</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;OPENAI_API_KEY=sk-...&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.env
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"OPENAI_API_KEY=sk-..."</span><span class="w"> </span>&gt;<span class="w"> </span>.env
 </code></pre></div>
 <p>Load in Python:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
@@ -1921,8 +1921,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiteLLMClient</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-key-here&quot;</span>  <span class="c1"># Not recommended for production</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o-mini"</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">api_key</span><span class="o">=</span><span class="s2">"your-key-here"</span>  <span class="c1"># Not recommended for production</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -1933,7 +1933,7 @@
 <li>Set key: <code>export OPENAI_API_KEY="sk-..."</code></li>
 <li>Use it:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiteLLMClient</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o-mini"</span><span class="p">)</span>
 </code></pre></div></li>
 </ol>
 <h3 id="anthropic-claude">Anthropic Claude<a class="headerlink" href="#anthropic-claude" title="Permanent link">&para;</a></h3>
@@ -1941,7 +1941,7 @@
 <li>Get API key: <a href="https://console.anthropic.com">console.anthropic.com</a></li>
 <li>Set key: <code>export ANTHROPIC_API_KEY="sk-ant-..."</code></li>
 <li>Use it:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-3-5-sonnet-20241022&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"claude-3-5-sonnet-20241022"</span><span class="p">)</span>
 </code></pre></div></li>
 </ol>
 <h3 id="google-gemini">Google Gemini<a class="headerlink" href="#google-gemini" title="Permanent link">&para;</a></h3>
@@ -1949,7 +1949,7 @@
 <li>Get API key: <a href="https://makersuite.google.com">makersuite.google.com</a></li>
 <li>Set key: <code>export GOOGLE_API_KEY="AIza..."</code></li>
 <li>Use it:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-pro&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gemini-pro"</span><span class="p">)</span>
 </code></pre></div></li>
 </ol>
 <h3 id="local-models-ollama">Local Models (Ollama)<a class="headerlink" href="#local-models-ollama" title="Permanent link">&para;</a></h3>
@@ -1957,7 +1957,7 @@
 <li>Install Ollama: <a href="https://ollama.ai">ollama.ai</a></li>
 <li>Pull model: <code>ollama pull llama2</code></li>
 <li>Use it:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;ollama/llama2&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"ollama/llama2"</span><span class="p">)</span>
 </code></pre></div></li>
 </ol>
 <p><strong>Supported Providers:</strong> 100+ via LiteLLM (AWS Bedrock, Azure, Cohere, Hugging Face, etc.)</p>
@@ -1967,7 +1967,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiteLLMClient</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o-mini"</span><span class="p">,</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span>  <span class="c1"># seconds</span>
@@ -1986,10 +1986,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">Skillbook</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># Save skillbook</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="s2">&quot;my_skillbook.json&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="s2">"my_skillbook.json"</span><span class="p">)</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># Load skillbook</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">skillbook</span> <span class="o">=</span> <span class="n">Skillbook</span><span class="o">.</span><span class="n">load_from_file</span><span class="p">(</span><span class="s2">&quot;my_skillbook.json&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">skillbook</span> <span class="o">=</span> <span class="n">Skillbook</span><span class="o">.</span><span class="n">load_from_file</span><span class="p">(</span><span class="s2">"my_skillbook.json"</span><span class="p">)</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1"># For production: Use database storage</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># PostgreSQL, SQLite, or vector stores supported</span>
@@ -2009,7 +2009,7 @@
 <a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="n">samples</span><span class="p">,</span>
 <a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="n">environment</span><span class="p">,</span>
 <a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="n">checkpoint_interval</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">checkpoint_dir</span><span class="o">=</span><span class="s2">&quot;./checkpoints&quot;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">checkpoint_dir</span><span class="o">=</span><span class="s2">"./checkpoints"</span>
 <a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -2027,7 +2027,7 @@
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Test different model</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>from<span class="w"> </span>ace<span class="w"> </span>import<span class="w"> </span>LiteLLMClient
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>LiteLLMClient<span class="o">(</span><span class="nv">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="o">)</span><span class="w">  </span><span class="c1"># Cheaper for testing</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>LiteLLMClient<span class="o">(</span><span class="nv">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="o">)</span><span class="w">  </span><span class="c1"># Cheaper for testing</span>
 </code></pre></div>
 <h3 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiteLLMClient</span>
@@ -2037,13 +2037,13 @@
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 1 second between calls</span>
 <a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Or use a cheaper/faster model</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">client</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="json-parse-failures">JSON Parse Failures<a class="headerlink" href="#json-parse-failures" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Increase max_tokens for SkillManager/Reflector</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">SkillManager</span><span class="p">,</span> <span class="n">Reflector</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">2048</span><span class="p">)</span>  <span class="c1"># Higher limit</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o-mini"</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">2048</span><span class="p">)</span>  <span class="c1"># Higher limit</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">skill_manager</span> <span class="o">=</span> <span class="n">SkillManager</span><span class="p">(</span><span class="n">llm</span><span class="p">)</span>
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="n">reflector</span> <span class="o">=</span> <span class="n">Reflector</span><span class="p">(</span><span class="n">llm</span><span class="p">)</span>
 </code></pre></div>

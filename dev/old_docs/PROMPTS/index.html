@@ -1966,7 +1966,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">AGENT_PROMPT</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">LiteLLMClient</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">llm</span><span class="p">,</span> <span class="n">prompt_template</span><span class="o">=</span><span class="n">AGENT_PROMPT</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="v20-advanced-aceprompts_v2py">v2.0 (Advanced) - <code>ace/prompts_v2.py</code><a class="headerlink" href="#v20-advanced-aceprompts_v2py" title="Permanent link">&para;</a></h3>
@@ -2133,9 +2133,9 @@
 </table>
 <p><strong>Output Format</strong> (JSON):
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;reasoning&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Step-by-step thinking process&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;final_answer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The actual answer&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">&quot;skill_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;skill1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;skill2&quot;</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">"reasoning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Step-by-step thinking process"</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">"final_answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The actual answer"</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">"skill_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"skill1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"skill2"</span><span class="p">]</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
 </code></pre></div></p>
 <h3 id="reflector-prompts">Reflector Prompts<a class="headerlink" href="#reflector-prompts" title="Permanent link">&para;</a></h3>
@@ -2189,10 +2189,10 @@
 </table>
 <p><strong>Output Format</strong> (JSON):
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&quot;analysis&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Analysis of what went wrong/right&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">&quot;skill_tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;skill1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;helpful&quot;</span><span class="p">},</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;skill2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;harmful&quot;</span><span class="p">}</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">"analysis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Analysis of what went wrong/right"</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">"skill_tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skill1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"helpful"</span><span class="p">},</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skill2"</span><span class="p">,</span><span class="w"> </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"harmful"</span><span class="p">}</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
 </code></pre></div></p>
@@ -2229,11 +2229,11 @@
 </table>
 <p><strong>Output Format</strong> (JSON):
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;updates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;section&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Math&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Always check units&quot;</span><span class="p">},</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;skill_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Revised strategy&quot;</span><span class="p">},</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TAG&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;skill_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;helpful&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;increment&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REMOVE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;skill_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3&quot;</span><span class="p">}</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">"updates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="p">{</span><span class="nt">"operation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ADD"</span><span class="p">,</span><span class="w"> </span><span class="nt">"section"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Math"</span><span class="p">,</span><span class="w"> </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Always check units"</span><span class="p">},</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">"operation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UPDATE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"skill_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Revised strategy"</span><span class="p">},</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">"operation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAG"</span><span class="p">,</span><span class="w"> </span><span class="nt">"skill_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s2"</span><span class="p">,</span><span class="w"> </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"helpful"</span><span class="p">,</span><span class="w"> </span><span class="nt">"increment"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">{</span><span class="nt">"operation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REMOVE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"skill_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3"</span><span class="p">}</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
 </code></pre></div></p>
@@ -2385,7 +2385,7 @@
 <h2 id="custom-prompts">Custom Prompts<a class="headerlink" href="#custom-prompts" title="Permanent link">&para;</a></h2>
 <h3 id="creating-custom-prompts">Creating Custom Prompts<a class="headerlink" href="#creating-custom-prompts" title="Permanent link">&para;</a></h3>
 <p>You can create domain-specific prompts while maintaining ACE compatibility:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">CUSTOM_AGENT_PROMPT</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">CUSTOM_AGENT_PROMPT</span> <span class="o">=</span> <span class="s2">"""</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="s2">You are a medical diagnosis assistant using ACE strategies.</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="s2"># Available Strategies</span>
@@ -2401,12 +2401,12 @@
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="si">{reflection}</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
 <a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="s2">IMPORTANT: Return JSON with:</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="s2">- &quot;reasoning&quot;: Your diagnostic reasoning</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="s2">- &quot;final_answer&quot;: Your diagnosis and recommendations</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="s2">- &quot;skill_ids&quot;: Strategy IDs you used (e.g., [&quot;med_01&quot;, &quot;diag_03&quot;])</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="s2">- "reasoning": Your diagnostic reasoning</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="s2">- "final_answer": Your diagnosis and recommendations</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="s2">- "skill_ids": Strategy IDs you used (e.g., ["med_01", "diag_03"])</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
 <a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="s2">Respond ONLY with valid JSON, no other text.</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="s2">"""</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
 <a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="c1"># Use it</span>
 <a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">llm</span><span class="p">,</span> <span class="n">prompt_template</span><span class="o">=</span><span class="n">CUSTOM_AGENT_PROMPT</span><span class="p">)</span>
@@ -2425,16 +2425,16 @@
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">Skillbook</span><span class="p">,</span> <span class="n">Sample</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Create test setup</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-sonnet-4-5-20250929&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LiteLLMClient</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"claude-sonnet-4-5-20250929"</span><span class="p">)</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">skillbook</span> <span class="o">=</span> <span class="n">Skillbook</span><span class="p">()</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="s2">&quot;Testing&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Always validate output format&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="s2">"Testing"</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">"Always validate output format"</span><span class="p">)</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
 <a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">llm</span><span class="p">,</span> <span class="n">prompt_template</span><span class="o">=</span><span class="n">CUSTOM_AGENT_PROMPT</span><span class="p">)</span>
 <a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
 <a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c1"># Test</span>
 <a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">output</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="n">question</span><span class="o">=</span><span class="s2">&quot;Test question&quot;</span><span class="p">,</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="n">context</span><span class="o">=</span><span class="s2">&quot;Test context&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="n">question</span><span class="o">=</span><span class="s2">"Test question"</span><span class="p">,</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="n">context</span><span class="o">=</span><span class="s2">"Test context"</span><span class="p">,</span>
 <a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    <span class="n">skillbook</span><span class="o">=</span><span class="n">skillbook</span><span class="p">,</span>
 <a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    <span class="n">reflection</span><span class="o">=</span><span class="kc">None</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="p">)</span>
@@ -2443,33 +2443,33 @@
 <a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="k">assert</span> <span class="n">output</span><span class="o">.</span><span class="n">reasoning</span>
 <a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="k">assert</span> <span class="n">output</span><span class="o">.</span><span class="n">final_answer</span>
 <a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">skill_ids</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Custom prompt works!&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"✓ Custom prompt works!"</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="advanced-topics">Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permanent link">&para;</a></h2>
 <h3 id="domain-specific-sections">Domain-Specific Sections<a class="headerlink" href="#domain-specific-sections" title="Permanent link">&para;</a></h3>
 <p>Organize skillbook skills by domain:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">&quot;Medical/Diagnosis&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Check for common symptoms first&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">"Medical/Diagnosis"</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">content</span><span class="o">=</span><span class="s2">"Check for common symptoms first"</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">&quot;Medical/Treatment&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Consider contraindications&quot;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">"Medical/Treatment"</span><span class="p">,</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">content</span><span class="o">=</span><span class="s2">"Consider contraindications"</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">)</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
 <a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">&quot;Legal/Compliance&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Verify HIPAA requirements&quot;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="n">section</span><span class="o">=</span><span class="s2">"Legal/Compliance"</span><span class="p">,</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">content</span><span class="o">=</span><span class="s2">"Verify HIPAA requirements"</span>
 <a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">)</span>
 </code></pre></div>
 <h3 id="multi-language-support">Multi-Language Support<a class="headerlink" href="#multi-language-support" title="Permanent link">&para;</a></h3>
 <p>v2.1 prompts work with non-English content:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Question and context can be in any language</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">output</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">question</span><span class="o">=</span><span class="s2">&quot;¿Cuál es la capital de Francia?&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">context</span><span class="o">=</span><span class="s2">&quot;Responde en español&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">question</span><span class="o">=</span><span class="s2">"¿Cuál es la capital de Francia?"</span><span class="p">,</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">context</span><span class="o">=</span><span class="s2">"Responde en español"</span><span class="p">,</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="n">skillbook</span><span class="o">=</span><span class="n">skillbook</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">)</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Output will be in Spanish</span>
@@ -2488,7 +2488,7 @@
 <p><strong>Cause</strong>: Skillbook is empty or skills not referenced</p>
 <p><strong>Solution</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Ensure skillbook has skills</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Skillbook has </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">skillbook</span><span class="o">.</span><span class="n">skills</span><span class="p">())</span><span class="si">}</span><span class="s2"> skills&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Skillbook has </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">skillbook</span><span class="o">.</span><span class="n">skills</span><span class="p">())</span><span class="si">}</span><span class="s2"> skills"</span><span class="p">)</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Check skillbook format</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">skillbook</span><span class="o">.</span><span class="n">as_prompt</span><span class="p">())</span>

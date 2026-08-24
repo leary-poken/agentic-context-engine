@@ -1894,33 +1894,33 @@
 <h3 id="add">ADD<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
 <p>Adds a new strategy learned from experience:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;section&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Math Strategies&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Break complex problems into smaller steps before computing&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ADD"</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"section"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Math Strategies"</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Break complex problems into smaller steps before computing"</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="update">UPDATE<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
 <p>Refines an existing strategy:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;skill_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;math-00001&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Break complex problems into smaller steps. Verify each step before proceeding.&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UPDATE"</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"skill_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"math-00001"</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Break complex problems into smaller steps. Verify each step before proceeding."</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="tag">TAG<a class="headerlink" href="#tag" title="Permanent link">&para;</a></h3>
 <p>Records whether a strategy helped or hurt:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TAG&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;skill_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;math-00001&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;helpful&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAG"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"skill_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"math-00001"</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"helpful"</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
 </code></pre></div>
 <p>Tags are one of: <code>helpful</code>, <code>harmful</code>, <code>neutral</code>.</p>
 <h3 id="remove">REMOVE<a class="headerlink" href="#remove" title="Permanent link">&para;</a></h3>
 <p>Prunes a strategy that is consistently harmful:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REMOVE&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;skill_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;math-00003&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REMOVE"</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">"skill_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"math-00003"</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="update-batches">Update Batches<a class="headerlink" href="#update-batches" title="Permanent link">&para;</a></h2>
@@ -1928,8 +1928,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace_next</span><span class="w"> </span><span class="kn">import</span> <span class="n">UpdateOperation</span><span class="p">,</span> <span class="n">UpdateBatch</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">batch</span> <span class="o">=</span> <span class="n">UpdateBatch</span><span class="p">(</span><span class="n">operations</span><span class="o">=</span><span class="p">[</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">UpdateOperation</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ADD&quot;</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="s2">&quot;Debugging&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Log inputs before errors&quot;</span><span class="p">),</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">UpdateOperation</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TAG&quot;</span><span class="p">,</span> <span class="n">skill_id</span><span class="o">=</span><span class="s2">&quot;debug-00001&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;helpful&quot;</span><span class="p">),</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">UpdateOperation</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">"ADD"</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="s2">"Debugging"</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">"Log inputs before errors"</span><span class="p">),</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">UpdateOperation</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">"TAG"</span><span class="p">,</span> <span class="n">skill_id</span><span class="o">=</span><span class="s2">"debug-00001"</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s2">"helpful"</span><span class="p">),</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">])</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">apply_update</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
